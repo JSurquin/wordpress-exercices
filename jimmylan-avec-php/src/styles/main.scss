@@ -1,0 +1,40 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'example-react-component.scss';
+
+html, body {
+  background-color: #FFF;
+  // padding: 0px!important;
+  margin: 0;
+}
+
+.page-container {
+	min-height:100vh; /* 1 */
+	display:flex; /* 2 */
+	flex-direction:column; /* 3 */
+}
+
+.content {
+	flex-grow:1; /* 4 */
+}
+
+
+body {
+  color: #333;
+  font-family: sans-serif;
+  font-size: .9rem;
+  @include atSmall {
+    font-size: 1.1rem;
+  }
+  @include atMedium {
+    font-size: 1.2rem;
+  }
+}
+
+a:link, a:visited {
+  color: $primaryColor;
+}
+
+a:hover {
+  color: $secondaryColor;
+}
